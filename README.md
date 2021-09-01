@@ -38,3 +38,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+
+## Installation
+
+Open bitbucket and git clone repository
+2- Create Database
+3- Add user account at database
+4- Check All global privilege
+5- Setting .env file (Database properties)
+6- Run Command “Composer Update” at git base
+7- Run Command “php artisan migrate:refresh --seed”
+8- Run Command “php artisan optimize”
+9- Run Command ”php artisan serve”
+10- Open browser link ” http://127.0.0.1:8000/login”
+11- Login username/password : admin/admin123
