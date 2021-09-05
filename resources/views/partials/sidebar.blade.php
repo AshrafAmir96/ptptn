@@ -13,6 +13,30 @@
                  <span>@lang('app.dashboard')</span>
             </a>
         </li>
+        <li class="menu-header">Report</li>
+        <li class="{{ Request::is('activity*') ? 'active' : ''  }}">
+            <a class="nav-link" href="{{ route('activity.index') }}">
+                 <i class="fas fa-chart-pie"></i>
+                <span>Asset Acceptance</span>
+            </a>
+        </li>
+        <li class="menu-header">Management</li>
+        <li class="nav-item dropdown {{ Request::is('role*') || Request::is('permission*') || Request::is('administrator*')? 'active' : '' }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-boxes"></i> <span>@lang('app.asset')</span></a>
+            <ul class="dropdown-menu">
+                @permission('assets.manage')
+                <li class="{{ Request::is('role*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('asset.list') }}">@lang('app.asset_acceptance')</a>
+                </li>
+                <li class="{{ Request::is('role*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('asset.list') }}">Asset Rejection</a>
+                </li>
+                <li class="{{ Request::is('role*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('asset.list') }}">Transferable Asset </a>
+                </li> 
+                @endpermission
+            </ul>
+        </li> 
         <li class="menu-header">Administration</li>
         @permission(['roles.manage', 'permissions.manage'])
         @permission('users.manage')

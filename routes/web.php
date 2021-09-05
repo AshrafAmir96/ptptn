@@ -82,6 +82,38 @@ Route::group(['middleware' => 'auth'], function () {
         'uses' => 'DashboardController@index'
     ]);
 
+     /**
+     * Asset
+     */
+
+    Route::get('asset', [
+        'as' => 'asset.list',
+        'uses' => 'AssetController@index'
+    ]);
+    Route::get('asset/create', [
+        'as' => 'asset.create',
+        'uses' => 'AssetController@create'
+    ]);
+    Route::post('asset/create', [
+        'as' => 'asset.store',
+        'uses' => 'AssetController@store'
+    ]);
+    Route::get('asset/{asset}/show', [
+        'as' => 'asset.show',
+        'uses' => 'AssetController@view'
+    ]);
+    Route::get('asset/{asset}/edit', [
+        'as' => 'asset.edit',
+        'uses' => 'AssetController@edit'
+    ]);
+    Route::delete('asset/{asset}/delete', [
+        'as' => 'asset.delete',
+        'uses' => 'AssetController@delete'
+    ]);
+    Route::put('asset/{asset}/update/details', [
+        'as' => 'asset.update.details',
+        'uses' => 'AssetController@updateDetails'
+    ]);
     /**
      * User Profile
      */

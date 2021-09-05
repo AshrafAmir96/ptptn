@@ -358,4 +358,11 @@ return [
     'impersonate' => 'Impersonate',
     'impersonate_user' => 'Impersonate User',
     'stop_impersonating' => 'Stop Impersonating',
+
+    // Dashboard
+    'asset' => 'Asset',
+    'asset_acceptance' => 'Asset Acceptance',
+    'search_asset_acceptance' => 'Search for asset acceptance...',
+    'create_asset_acceptance' => 'Create New Asset Acceptance (KEW.PA-1)',
+    
 ];

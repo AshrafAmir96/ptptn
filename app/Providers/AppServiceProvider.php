@@ -15,6 +15,8 @@ use App\Repositories\Session\DbSession;
 use App\Repositories\Session\SessionRepository;
 use App\Repositories\User\EloquentUser;
 use App\Repositories\User\UserRepository;
+use App\Repositories\Asset\EloquentAsset;
+use App\Repositories\Asset\AssetRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -39,6 +41,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(UserRepository::class, EloquentUser::class);
+        $this->app->singleton(AssetRepository::class, EloquentAsset::class);
         $this->app->singleton(ActivityRepository::class, EloquentActivity::class);
         $this->app->singleton(RoleRepository::class, EloquentRole::class);
         $this->app->singleton(PermissionRepository::class, EloquentPermission::class);
