@@ -3,12 +3,12 @@
         <div class="form-group">
             <label for="first_name">No. Kod</label>
             <input type="text" class="form-control" id="first_name"
-                   name="first_name" placeholder="" value="BA2301923">
+                   name="first_name" placeholder="@lang('app.first_name')" value="BA2301923">
         </div>
         <div class="form-group">
             <label for="first_name">Keterangan Aset Alih</label>
             <input type="text" class="form-control" id="first_name"
-                   name="first_name" placeholder="" value="Meja Komputer">
+                   name="first_name" placeholder="@lang('app.first_name')" value="Meja Komputer">
         </div>
         <div class="form-group">
             <label for="first_name">Nota Hantaran (DO) </label>

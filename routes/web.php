@@ -146,6 +146,38 @@ Route::group(['middleware' => 'auth'], function () {
         'as' => 'rejection.update.details',
         'uses' => 'RejectionController@updateDetails'
     ]);
+     /**
+     * Asset Registration
+     */
+
+    Route::get('registration', [
+        'as' => 'registration.list',
+        'uses' => 'RegistrationController@index'
+    ]);
+    Route::get('registration/create', [
+        'as' => 'registration.create',
+        'uses' => 'RegistrationController@create'
+    ]);
+    Route::post('registration/create', [
+        'as' => 'registration.store',
+        'uses' => 'RegistrationController@store'
+    ]);
+    Route::get('registration/{registration}/show', [
+        'as' => 'registration.show',
+        'uses' => 'RegistrationController@view'
+    ]);
+    Route::get('registration/{registration}/edit', [
+        'as' => 'registration.edit',
+        'uses' => 'RegistrationController@edit'
+    ]);
+    Route::delete('registration/{registration}/delete', [
+        'as' => 'registration.delete',
+        'uses' => 'RegistrationController@delete'
+    ]);
+    Route::put('registration/{registration}/update/details', [
+        'as' => 'registration.update.details',
+        'uses' => 'RegistrationController@updateDetails'
+    ]);
     /**
      * User Profile
      */

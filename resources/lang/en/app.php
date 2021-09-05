@@ -368,5 +368,10 @@ return [
     'search_asset_rejection' => 'Search for asset rejection...',
     'create_asset_rejection' => 'Create New Asset Rejection (KEW.PA-2)',
     'asset_registration' => 'Asset Registration',
+    'search_asset_registration' => 'Search for asset registration or capital asset...',
+    'create_asset_registration' => 'Create New Asset Registration (KEW.PA-3)',
+    'capital_asset' => 'Capital Asset',
+    'create_capital_asset_a' => 'Create New Capital Asset (KEW.PA-3) Section A',
+    'create_capital_asset_b' => 'Create New Capital Asset (KEW.PA-3) Section B',
     
 ];

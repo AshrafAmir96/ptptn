@@ -38,7 +38,7 @@
                     <a class="nav-link" href="{{ route('rejection.list') }}">@lang('app.asset_rejection')</a>
                 </li>
                 <li class="{{ Request::is('role*') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('asset.list') }}">@lang('app.asset_registration')</a>
+                    <a class="nav-link" href="{{ route('registration.list') }}">@lang('app.asset_registration')</a>
                 </li> 
                 @endpermission
             </ul>
