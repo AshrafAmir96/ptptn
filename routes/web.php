@@ -114,6 +114,38 @@ Route::group(['middleware' => 'auth'], function () {
         'as' => 'asset.update.details',
         'uses' => 'AssetController@updateDetails'
     ]);
+     /**
+     * Asset Rejection
+     */
+
+    Route::get('rejection', [
+        'as' => 'rejection.list',
+        'uses' => 'RejectionController@index'
+    ]);
+    Route::get('rejection/create', [
+        'as' => 'rejection.create',
+        'uses' => 'RejectionController@create'
+    ]);
+    Route::post('rejection/create', [
+        'as' => 'rejection.store',
+        'uses' => 'RejectionController@store'
+    ]);
+    Route::get('rejection/{rejection}/show', [
+        'as' => 'rejection.show',
+        'uses' => 'RejectionController@view'
+    ]);
+    Route::get('rejection/{rejection}/edit', [
+        'as' => 'rejection.edit',
+        'uses' => 'RejectionController@edit'
+    ]);
+    Route::delete('rejection/{rejection}/delete', [
+        'as' => 'rejection.delete',
+        'uses' => 'RejectionController@delete'
+    ]);
+    Route::put('rejection/{rejection}/update/details', [
+        'as' => 'rejection.update.details',
+        'uses' => 'RejectionController@updateDetails'
+    ]);
     /**
      * User Profile
      */

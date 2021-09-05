@@ -16,8 +16,14 @@
         <li class="menu-header">Report</li>
         <li class="{{ Request::is('activity*') ? 'active' : ''  }}">
             <a class="nav-link" href="{{ route('activity.index') }}">
-                 <i class="fas fa-chart-pie"></i>
-                <span>Asset Acceptance</span>
+                <i class="fas fa-copy"></i>
+                <span>@lang('app.asset_acceptance')</span>
+            </a>
+        </li>
+        <li class="{{ Request::is('activity*') ? 'active' : ''  }}">
+            <a class="nav-link" href="{{ route('activity.index') }}">
+                <i class="fas fa-copy"></i>
+                <span>@lang('app.asset_registration')</span>
             </a>
         </li>
         <li class="menu-header">Management</li>
@@ -29,10 +35,10 @@
                     <a class="nav-link" href="{{ route('asset.list') }}">@lang('app.asset_acceptance')</a>
                 </li>
                 <li class="{{ Request::is('role*') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('asset.list') }}">Asset Rejection</a>
+                    <a class="nav-link" href="{{ route('rejection.list') }}">@lang('app.asset_rejection')</a>
                 </li>
                 <li class="{{ Request::is('role*') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('asset.list') }}">Transferable Asset </a>
+                    <a class="nav-link" href="{{ route('asset.list') }}">@lang('app.asset_registration')</a>
                 </li> 
                 @endpermission
             </ul>

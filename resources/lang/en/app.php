@@ -364,5 +364,9 @@ return [
     'asset_acceptance' => 'Asset Acceptance',
     'search_asset_acceptance' => 'Search for asset acceptance...',
     'create_asset_acceptance' => 'Create New Asset Acceptance (KEW.PA-1)',
+    'asset_rejection' => 'Asset Rejection',
+    'search_asset_rejection' => 'Search for asset rejection...',
+    'create_asset_rejection' => 'Create New Asset Rejection (KEW.PA-2)',
+    'asset_registration' => 'Asset Registration',
     
 ];
