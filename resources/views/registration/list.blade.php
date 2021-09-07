@@ -27,7 +27,7 @@
                                class="form-control input-solid"
                                name="search"
                                value="{{ Request::has('search') ? Request::get('search') : '' }}"
-                               placeholder="@lang('app.search_asset_rejection')">
+                               placeholder="@lang('app.search_asset_registration')">
 
                             <span class="input-group-append">
                                 @if (Request::has('search') && Request::get('search') != '')
@@ -51,11 +51,7 @@
                 <div class="col-md-6">
                     <a href="{{ route('registration.create') }}" class="btn btn-primary btn-rounded float-right">
                         <i class="fas fa-plus mr-2"></i>
-                        @lang('app.asset_registration')
-                    </a>
-                    <a href="{{ route('registration.create') }}" class="btn btn-primary btn-rounded float-right">
-                        <i class="fas fa-plus mr-2"></i>
-                        @lang('app.capital_asset')
+                        Capital Asset or Low Value Moveable Asset Registration
                     </a>
                 </div>
             </div>
@@ -69,7 +65,7 @@
                     <th class="min-width-150">No. Siri Pendaftaran</th>
                     <th class="min-width-100">Kementerian/ Jabatan</th>
                     <th class="min-width-80">Bahagian/ Cawangan</th>
-                    <th class="min-width-80">Kumpulan Aset </th>
+                    <th class="min-width-80">Aset Alih </th>
                     <th class="text-center min-width-80">@lang('app.action')</th>
                 </tr>
                 </thead>
@@ -80,82 +76,29 @@
                             <td>JPM/APMM/CB/H/18/1</td>
                             <td>APMM</td>
                             <td>CB</td>
-                            <td>BLA3200AD94</td>
+                            <td>H</td>
                             <td>    
-                                <a href="{{ route('rejection.edit', 1) }}"
+                                <a href="{{ route('registration.edit', 1) }}"
                                 style="padding: 2px;" class="text-dark"
-                                title="Edit Asset Rejection"
+                                title="Edit Asset Registration"
                                 data-toggle="tooltip" data-placement="top">
                                     <i class="fas fa-edit"></i>
                                 </a>
 
-                                <a href="{{ route('rejection.delete', 1) }}"
+                                <a href="{{ route('registration.delete', 1) }}"
                                 style="padding: 2px;" class="text-dark"
-                                title="Delete Asset Rejection"
+                                title="Delete Asset Registration"
                                 data-toggle="tooltip"
                                 data-placement="top"
                                 data-method="DELETE"
                                 data-confirm-title="@lang('app.please_confirm')"
-                                data-confirm-text="Are you sure want to delete Asset Rejection"
+                                data-confirm-text="Are you sure want to delete Asset Registration"
                                 data-confirm-delete="Delete">
                                     <i class="fas fa-trash"></i>
                                 </a>            
                             </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>JPM/APMM/CB/H/18/1</td>
-                            <td>LH1AJ20011</td>
-                            <td>LHDS20AS123300</td>
-                            <td>BLA3200AD94</td>
-                            <td>    
-                                <a href="{{ route('rejection.edit', 1) }}"
-                                style="padding: 2px;" class="text-dark"
-                                title="Edit Asset Rejection"
-                                data-toggle="tooltip" data-placement="top">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-
-                                <a href="{{ route('rejection.delete', 1) }}"
-                                style="padding: 2px;" class="text-dark"
-                                title="Delete Asset Rejection"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                data-method="DELETE"
-                                data-confirm-title="@lang('app.please_confirm')"
-                                data-confirm-text="Are you sure want to delete Asset Rejection"
-                                data-confirm-delete="Delete">
-                                    <i class="fas fa-trash"></i>
-                                </a>            
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>JPM/APMM/CB/H/18/1</td>
-                            <td>LH1AJ20011</td>
-                            <td>LHDD39120DD229</td>
-                            <td>BLA3200AD94</td>
-                            <td>    
-                                <a href="{{ route('rejection.edit', 1) }}"
-                                style="padding: 2px;" class="text-dark"
-                                title="Edit Asset Rejection"
-                                data-toggle="tooltip" data-placement="top">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-
-                                <a href="{{ route('rejection.delete', 1) }}"
-                                style="padding: 2px;" class="text-dark"
-                                title="Delete Asset Rejection"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                data-method="DELETE"
-                                data-confirm-title="@lang('app.please_confirm')"
-                                data-confirm-text="Are you sure want to delete Asset Rejection"
-                                data-confirm-delete="Delete">
-                                    <i class="fas fa-trash"></i>
-                                </a>            
-                            </td>
-                        </tr>
+                       
                     @else
                         <tr>
                             <td colspan="7"><em>@lang('app.no_records_found')</em></td>

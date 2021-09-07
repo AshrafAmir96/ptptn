@@ -103,6 +103,22 @@ class RegistrationController extends Controller
     }
 
     /**
+     * Displays form for creating a new user.
+     *
+     * @param CountryRepository $countryRepository
+     * @param RoleRepository $roleRepository
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function create2(CountryRepository $countryRepository, RoleRepository $roleRepository)
+    {
+        $countries = $this->parseCountries($countryRepository);
+        $roles = $roleRepository->lists();
+        $statuses = UserStatus::lists();
+
+        return view('registration.capital_asset.add2', compact('countries', 'roles', 'statuses'));
+    }
+
+    /**
      * Parse countries into an array that also has a blank
      * item as first element, which will allow users to
      * leave the country field unpopulated.
@@ -159,7 +175,29 @@ class RegistrationController extends Controller
         $socialLogins = $this->users->getUserSocialLogins($user->id);
 
         return view(
-            'registration.add',
+            'registration.capital_asset.add',
+            compact('edit', 'user', 'countries', 'socialLogins', 'roles', 'statuses')
+        );
+    }
+
+    /**
+     * Displays edit user form.
+     *
+     * @param User $user
+     * @param CountryRepository $countryRepository
+     * @param RoleRepository $roleRepository
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function edit2(User $user, CountryRepository $countryRepository, RoleRepository $roleRepository)
+    {
+        $edit = true;
+        $countries = $this->parseCountries($countryRepository);
+        $roles = $roleRepository->lists();
+        $statuses = UserStatus::lists();
+        $socialLogins = $this->users->getUserSocialLogins($user->id);
+
+        return view(
+            'registration.capital_asset.add2',
             compact('edit', 'user', 'countries', 'socialLogins', 'roles', 'statuses')
         );
     }

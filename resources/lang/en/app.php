@@ -359,7 +359,7 @@ return [
     'impersonate_user' => 'Impersonate User',
     'stop_impersonating' => 'Stop Impersonating',
 
-    // Dashboard
+    // Asset
     'asset' => 'Asset',
     'asset_acceptance' => 'Asset Acceptance',
     'search_asset_acceptance' => 'Search for asset acceptance...',
@@ -369,9 +369,9 @@ return [
     'create_asset_rejection' => 'Create New Asset Rejection (KEW.PA-2)',
     'asset_registration' => 'Asset Registration',
     'search_asset_registration' => 'Search for asset registration or capital asset...',
-    'create_asset_registration' => 'Create New Asset Registration (KEW.PA-3)',
+    'create_asset_registration' => 'Create New Capital Asset or Low Value Moveable Asset Registration (KEW.PA-3)',
     'capital_asset' => 'Capital Asset',
-    'create_capital_asset_a' => 'Create New Capital Asset (KEW.PA-3) Section A',
-    'create_capital_asset_b' => 'Create New Capital Asset (KEW.PA-3) Section B',
+    'create_capital_asset_a' => 'Register New Capital Asset (KEW.PA-3) or Low Value Moveable Asset (KEW.PA-4) Section A',
+    'create_capital_asset_b' => 'Register New Capital Asset (KEW.PA-3) or Low Value Moveable Asset (KEW.PA-4) Section B',
     
 ];

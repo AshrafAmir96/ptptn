@@ -19,9 +19,9 @@
 @include('partials.messages')
 
 @if (!empty($edit))
-{!! Form::open(['route' => ['registration.update.details', 1], 'method' => 'PUT', 'id' => 'user-form']) !!}
+{!! Form::open(['route' => ['registration.edit2',1], 'method' => 'GET', 'id' => 'user-form']) !!}
 @else
-{!! Form::open(['route' => 'registration.store', 'files' => true, 'id' => 'user-form']) !!}
+{!! Form::open(['route' => 'registration.create2', 'files' => true, 'id' => 'user-form']) !!}
 @endif
 
 
@@ -119,7 +119,7 @@
     <div class="row">
         <div class="col-md-12">
             <button type="submit" class="btn btn-primary">
-                Capital Asset (KEW.PA-3) Section B
+                Capital Asset or Low Value Moveable Asset (KEW.PA-3) Section B
             </button>
         </div>
     </div>
@@ -127,7 +127,7 @@
     <div class="row">
         <div class="col-md-12">
             <button type="submit" class="btn btn-primary">
-                Capital Asset (KEW.PA-3) Section B
+                Capital Asset or Low Value Moveable Asset (KEW.PA-3) Section B
             </button>
         </div>
     </div>

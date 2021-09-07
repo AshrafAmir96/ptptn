@@ -63,7 +63,7 @@
                 <tr>
                     <th>No</th>
                     <th class="min-width-150">No. Rujukan</th>
-                    <th class="min-width-100">Jenis Penerimaan</th>
+                    
                     <th class="min-width-80">Nombor Rujukan Pesanan Kerajaan (PK)/ Kontrak/ Surat Kelulusan</th>
                     <th class="min-width-80">Nombor Rujukan Nota Hantaran (DO)</th>
                     <th class="text-center min-width-80">@lang('app.action')</th>
@@ -74,7 +74,7 @@
                          <tr>
                             <td>1</td>
                             <td>LH1AJ20011</td>
-                            <td></td>
+                    
                             <td>LHDS2021AJ23099</td>
                             <td>BLA3200AD94</td>
                             <td>    
@@ -101,7 +101,7 @@
                         <tr>
                             <td>2</td>
                             <td>LH1AJ20212</td>
-                            <td></td>
+                      
                             <td>LHDS20AS123300</td>
                             <td>BLA3200AD94</td>
                             <td>    
@@ -129,7 +129,7 @@
                         <tr>
                             <td>3</td>
                             <td>LH1AJ24401</td>
-                            <td></td>
+                    
                             <td>LHDD39120DD229</td>
                             <td>BLA3200AD94</td>
                             <td>    

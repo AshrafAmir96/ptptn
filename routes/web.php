@@ -158,6 +158,10 @@ Route::group(['middleware' => 'auth'], function () {
         'as' => 'registration.create',
         'uses' => 'RegistrationController@create'
     ]);
+    Route::post('registration/create2', [
+        'as' => 'registration.create2',
+        'uses' => 'RegistrationController@create2'
+    ]);
     Route::post('registration/create', [
         'as' => 'registration.store',
         'uses' => 'RegistrationController@store'
@@ -169,6 +173,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('registration/{registration}/edit', [
         'as' => 'registration.edit',
         'uses' => 'RegistrationController@edit'
+    ]);
+    Route::get('registration/{registration}/edit2', [
+        'as' => 'registration.edit2',
+        'uses' => 'RegistrationController@edit2'
     ]);
     Route::delete('registration/{registration}/delete', [
         'as' => 'registration.delete',
